@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pistols</title>
+    <style>
+        img {
+            MAX_WIDTH : 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>This is where your love for firearms begin</h1>
+    <ul>
+        {% for items in pistols_list %}
+        <li>
+            <img alt="{{ items["title"] }}"  src="{{ items["src"] }}">
+            <h2>{{ items["title"] }}</h2>
+            <p>{{ items["pricetag"] }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

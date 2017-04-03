@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+</head>
+<body>
+<div>
+    {% for person in person %}
+        <img class="w3-row w3-half w3-container" alt="Ellie" src="{{ person["avatar"] }}">
+        <div>
+            <h1>Fullname: {{ person['fullname'] }}</h1>
+            <h2>Quote: - 不愉快です！-</h2>
+            <p>
+                <strong>Born on</strong> {{ person["dob"] }} <br>
+                <strong>Phone:</strong>      {{ person["phone"] }} <br>
+                <strong>Email:</strong>      {{ person["email"] }} <br>
+                <strong>Location:</strong>   {{ person["location"] }} <br>
+                <strong>Education:</strong>  {{ person["education"] }} <br>
+                <strong>Work Exp:</strong>   {{ person["workexp"] }} <br>
+            </p>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>

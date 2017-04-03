@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>HOWLY</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Comic Sans MS", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('http://cdn.wallpapersafari.com/72/11/G7VlsL.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<link rel="stylesheet" href="../static/css/style_firearm.css">
+<body>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo w3-padding-jumbo">
+    <p><img src="../static/image/0.png" alt="Howly"><br> HOWLY</p>
+{#    <p>HOWLY</p>#}
+  </div>
+  <div class="w3-display-topleft w3-padding-jumbo w3-xlarge">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-dimgray w3-border w3-round-large button">menu</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-dimgray w3-border w3-round-large button">contact</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-jumbo">
+    <p class="w3-xlarge">Mon - Fri | Sat - Sun</p>
+    <p class="w3-large">BS</p>
+    <p>powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright closebutton">x</span>
+      <h1>Pistols</h1>
+    </div>
+    <div class="w3-container w3-center">
+      {% for pist in pistols_list %}
+        <div class="w3-col m4 gridthird">
+            <img src="{{ pist["src"] }}"  style="width: 50%">
+            <h5><b>{{ pist["title"] }}</b></h5>
+            <h6 class="w3-red">{{ pist["pricetag"] }}</h6>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="w3-container w3-black">
+      <h1>Revolvers</h1>
+    </div>
+    <div class="w3-container w3-center">
+      {% for revol in revolvers_list %}
+        <div class="w3-col m4 gridthird">
+            <img src="{{ revol["src"] }}"  style="width: 50%">
+            <h5><b>{{ revol["title"] }}</b></h5>
+            <h6 class="w3-red">{{ revol["pricetag"] }}</h6>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright closebutton">x</span>
+      <h1>Contact</h1>
+    </div>
+    <div class="w3-container">
+      <p>-Ideas pull the trigger, but instinct loads the gun-</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Phone" required name="People"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="example@gmail.com" required name="Email"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="w3-button" type="submit">ORDER</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+

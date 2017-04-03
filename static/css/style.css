@@ -1,0 +1,59 @@
+p {
+    color : blue;
+    background-color: antiquewhite;
+    font-size: 20px;
+    font-family: "Comic Sans MS", sans-serif, Tahoma;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div {
+    color : red;
+    font-size: 16px;
+}
+
+.red_css {
+    color: darkred;
+}
+
+.blue_css {
+    color: darkblue;
+}
+
+.yellow_background {
+    background: yellow;
+}
+
+/*hover: mouse point activation*/
+.title:hover {
+    text-decoration: underline;
+}
+
+.bg {
+    background: url("http://pm1.narvii.com/5809/5336e6e8941fd281b340ee5fc1f37862c5e1cb14_hq.jpg");
+    width: 1024px;
+    height: 598px;
+    display: inline-block;
+}
+
+a {
+    color: deeppink;
+    font-size: 16px;
+    text-decoration: none;
+    /*-all: to set which animation above affected by transition. Transition: speed of effect*/
+    transition: 0.5s all;
+    padding-top: 299px;
+    padding-left: 512px;
+}
+
+a:active,
+a:hover {
+    font-size: 200%;
+    color: white;
+    text-decoration: underline;
+}
+
+p {
+    display: inline-block;
+    padding: 100px;
+}
